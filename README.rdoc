@@ -1,0 +1,22 @@
+= Enhancing your prototyped websites
+
+Proto-regions let you toggle regions in your prototype, showing the same page in different states.
+Pretty much only a proof of concept currently.
+
+== Installation
+
+Insert a style tag into the head of a HTML document:
+
+    <style type="text/css" media="all"> 
+        .is { display: none; }
+    </style>
+
+Below the style include, include the javascript:
+
+    <script type="text/javascript" src="http://github.com/thinkcreate/proto-regions/raw/master/regions.js"></script>
+
+Init the script by placing this somewhere in the page:
+
+    <script type="text/javascript">
+        Regions.init();
+    </script>
