@@ -7,16 +7,40 @@ Pretty much only a proof of concept currently.
 
 Insert a style tag into the head of a HTML document:
 
-    <style type="text/css" media="all"> 
-        .is { display: none; }
-    </style>
+  <style type="text/css" media="all"> 
+      .is { display: none; }
+  </style>
 
 Below the style include, include the javascript:
 
-    <script type="text/javascript" src="http://github.com/thinkcreate/proto-regions/raw/master/regions.js"></script>
+  <script type="text/javascript" src="http://github.com/thinkcreate/proto-regions/raw/master/regions.js"></script>
 
 Init the script by placing this somewhere in the page:
 
-    <script type="text/javascript">
-        Regions.init();
-    </script>
+  <script type="text/javascript">
+      Regions.init();
+  </script>
+
+== Get busy
+
+Lets define a region. We'll prototype what it looks like when someone is logged-in.
+Add the following snippet to your page:
+
+  <div id="header">
+    <div class="login is false">
+      <a href="/login">login</a>
+      |
+      <a href="/register">register</a>
+    </div>
+  
+    <div class="login is true">
+      <a href="/profile">gert@thinkcreate.nl</a>
+      |
+      <a href="/account">account</a>
+    </div>
+  </div> <!-- /#header -->
+
+The region we just added is called login and has two states, true and false.
+The options for this region will show up in the toolbar and we'll now be able to wander through the site as a logged-in user!
+
+Enjoy!
