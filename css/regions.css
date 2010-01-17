@@ -1,0 +1,34 @@
+body {
+  margin-top:40px;
+}
+
+.is {
+  display:none;
+}
+
+#toolbar {
+  font: 1em "lucida Grande",arial,sans-serif;
+  width:100%;
+  position:fixed;
+  top:0px;
+  left:0px;
+  background:transparent url(http://github.com/thinkcreate/proto-regions/raw/master/img/bg1.jpg) repeat-x scroll 0 0;
+  height:40px;
+  vertical-align:middle;
+  padding:6px 10px 0 10px;
+  z-index:1000;
+}
+
+#toolbar label{
+  font-size:18px;
+  border:none;
+  margin-left:3px;
+}
+
+#toolbar select.region {
+  font-size:14px;
+  width:10%;
+  margin:0px;
+  padding:0px;
+  margin-right:10px;
+}
