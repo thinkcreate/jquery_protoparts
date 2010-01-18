@@ -1,6 +1,6 @@
 = Enhancing your prototyped websites
 
-Proto-regions let you toggle regions in your prototype, showing the same page in different states.
+Proto-parts let you toggle regions in your prototype, showing the same page in different states.
 Pretty much only a proof of concept currently.
 
 == Installation
@@ -13,7 +13,7 @@ Insert a style tag into the head of a HTML document:
 
 Below the style include, include the javascript:
 
-  <script type="text/javascript" src="http://github.com/thinkcreate/proto-regions/raw/master/regions.js"></script>
+  <script type="text/javascript" src="http://github.com/thinkcreate/proto-parts/raw/master/regions.js"></script>
 
 Init the script by placing this somewhere in the page:
 
@@ -23,7 +23,7 @@ Init the script by placing this somewhere in the page:
 
 == Get busy
 
-Lets define a region. We'll prototype what it looks like when someone is logged-in.
+Now lets prototype what it looks like when someone is logged-in.
 Add the following snippet to your page:
 
   <div id="header">
@@ -40,7 +40,7 @@ Add the following snippet to your page:
     </div>
   </div> <!-- /#header -->
 
-The region we just added is called login and has two states, true and false.
-The options for this region will show up in the toolbar and we'll now be able to wander through the site as a logged-in user!
+The login part we just added has two states, true and false.
+The states will show up in the toolbar and we'll now be able to wander through the site as a logged-in user!
 
 Enjoy!
