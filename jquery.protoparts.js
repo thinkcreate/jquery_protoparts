@@ -29,7 +29,7 @@
           var part = klasses[is_ix-1];
           var state = klasses[is_ix+1];
 
-          if (_parts[part]){
+          if (_parts[part] && _parts[part].indexOf(state) == -1){
             _parts[part].push(state);
           } else {
             _parts[part] = [state];
