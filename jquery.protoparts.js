@@ -42,7 +42,7 @@
         var part_states = parts[part];
         
         //TODO handle no part, no state
-        _(part_states).each(function(st){
+        $.each(part_states, function(ix, st){
           $('.'+part+'.is.'+st).css('display', 'none');
         });
         $('.'+part+'.is.'+state).css('display', 'block');
@@ -59,11 +59,11 @@
       
       // draw bar
       var selects = '';
-      _(parts).each(function(part_states, part){
+      $.each(parts, function(part, part_states){
         var active_state = active_states[part] ? active_states[part] : part_states[0];
         
         var options = '';
-        _(part_states).each(function(st){
+        $.each(part_states, function(ix, st){
           selected = (active_state == st ? "selected" : "");
           options += '\
           <option value="'+st+'" '+selected+'   >\
@@ -85,7 +85,7 @@
       $('body').prepend('<div id="pp_bar">'+selects+'</div>');
       
       // init all parts
-      _(parts).each(function(part_states, part){
+      $.each(parts, function(part, part_states){
         var active_state = active_states[part] ? active_states[part] : part_states[0];
         
         activate_state(part, active_state);
