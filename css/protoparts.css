@@ -1,0 +1,20 @@
+body div#pp_bar {
+position: fixed;
+right: 0;
+bottom: 0;
+padding: 4px;
+background-color: #252C33;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+opacity: 0.9;
+font-size: 12px;
+line-height: 1em;
+color:white;
+-moz-border-radius-topleft:4px;
+-webkit-border-top-left-radius:4px;
+}
+body div#pp_bar label {
+  margin-left:5px;
+  padding-right:4px;
+  display:inline;
+}

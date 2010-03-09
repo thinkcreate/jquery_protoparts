@@ -1,24 +1,32 @@
 = Enhancing your prototyped websites
 
-Proto-parts let you toggle regions in your prototype, showing the same page in different states.
+Protoparts is a jquery-plugin that lets you toggle regions in your prototype, showing the same page in different states.
 Pretty much only a proof of concept currently.
 
 == Installation
 
 Insert a style tag into the head of a HTML document:
-
+  <link href="http://github.com/thinkcreate/jquery_protoparts/raw/master/css/protoparts.css" media="all" rel="stylesheet" type="text/css" />
+  
   <style type="text/css" media="all"> 
       .is { display: none; }
   </style>
 
-Below the style include, include the javascript:
+Below the style include, include the javascript. 
+Lets start with the required libraries (jquery, jquery.cookies and underscore):
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+  <script src="http://cookies.googlecode.com/svn/trunk/jquery.cookies.js" type="text/javascript"></script>
+  <script src="http://github.com/documentcloud/underscore/raw/0.6.0/underscore-min.js" type="text/javascript"></script>
 
-  <script type="text/javascript" src="http://github.com/thinkcreate/proto-parts/raw/master/regions.js"></script>
+The plugin itself:
+  <script type="text/javascript" src="http://github.com/thinkcreate/jquery_protoparts/raw/master/jquery.protoparts.js"></script>
 
 Init the script by placing this somewhere in the page:
 
-  <script type="text/javascript">
-      Regions.init();
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+      $("html").protoparts();
+    });
   </script>
 
 == Get busy
@@ -27,13 +35,13 @@ Now lets prototype what it looks like when someone is logged-in.
 Add the following snippet to your page:
 
   <div id="header">
-    <div class="login is false">
+    <div class="logged_in is false">
       <a href="/login">login</a>
       |
       <a href="/register">register</a>
     </div>
   
-    <div class="login is true">
+    <div class="logged_in is true">
       <a href="/profile">gert@thinkcreate.nl</a>
       |
       <a href="/account">account</a>
