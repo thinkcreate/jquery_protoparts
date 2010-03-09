@@ -107,7 +107,7 @@
           selected = (active_state == st ? "selected" : "");
           options += '\
           <option value="'+st+'" '+selected+'   >\
-            '+st+'\
+            '+(st || "----")+'\
           </option>\
           ';
         });
