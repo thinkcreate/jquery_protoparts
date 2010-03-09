@@ -1,7 +1,9 @@
 = Enhancing your prototyped websites
 
 Protoparts is a jquery-plugin that lets you toggle regions in your prototype, showing the same page in different states.
+
 The demo explains it best: http://thinkcreate.github.com/jquery_protoparts/
+
 Pretty much only a proof of concept currently.
 
 == Installation
