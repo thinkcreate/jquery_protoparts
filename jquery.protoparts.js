@@ -86,6 +86,7 @@
       parts = find_parts();
       // read active states from cookie and url
       active_states = $.cookies.get('active_states') || {};
+      
       $.each(states_from_url(), function(k,v){
         active_states[k] = v;
       });
@@ -131,7 +132,7 @@
       
       // init all parts
       $.each(parts, function(part, part_states){
-        var active_state = active_states[part] ? active_states[part] : part_states[0];
+        var active_state = (active_states[part] && parts[part].indexOf(active_states[part]) != -1) ? active_states[part] : part_states[0];
         
         activate_state(part, active_state);
       });
