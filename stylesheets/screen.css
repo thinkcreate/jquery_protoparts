@@ -125,7 +125,7 @@ body { text-align: center; font-size: 100%; line-height: 1.5em; }
 
 /* @end */
 /* @group DEBUG */
-#page { background-image: url('/images/grid.png?1268351250'); background-repeat: repeat; background-position: 1.639% 0; }
+#page { background-image: url('../images/grid.png?1268351250'); background-repeat: repeat; background-position: 1.639% 0; }
 #page * { background: transparent; }
 #page div { background: rgba(0,0,0,.125); }
 
