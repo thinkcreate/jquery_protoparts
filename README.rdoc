@@ -4,7 +4,6 @@ Protoparts is a jQuery plugin that lets you toggle regions in your prototype, sh
 
 The demo explains it best: http://thinkcreate.github.com/jquery_protoparts
 
-Pretty much only a proof of concept currently.
 
 == Installation
 
@@ -52,5 +51,13 @@ Add the following snippet to your page:
 
 The login part we just added has two states, true and false.
 The states will show up in the toolbar and we'll now be able to wander through the site as a logged-in user!
+
+== Meta
+
+Created by Gert Goet
+
+http://github.com/thinkcreate/jquery_protoparts
+
+Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
 
 Enjoy!

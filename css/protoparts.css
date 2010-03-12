@@ -13,6 +13,7 @@ color:white;
 border-radius:4px 0px 0px 0px;
 -moz-border-radius-topleft:4px;
 -webkit-border-top-left-radius:4px;
+text-align: right;
 }
 
 body div#pp_bar .permalink {

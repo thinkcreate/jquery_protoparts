@@ -1,12 +1,4 @@
 (function($) {
-  if (!window.console || !console.firebug){
-      var names = ["log", "debug", "info", "warn", "error", "assert", "dir", "dirxml",
-      "group", "groupEnd", "time", "timeEnd", "count", "trace", "profile", "profileEnd"];
-
-      window.console = {};
-      for (var i = 0; i < names.length; ++i)
-          window.console[names[i]] = function() {}
-  }
   
   $.fn.protoparts = function(options) {
     // settings = $.extend({
@@ -36,10 +28,9 @@
       }
       
       function url(active_states){
-        var base_url = window.location.toString();
-        if(window.location.hash != ""){
-          base_url = base_url.split(window.location.hash)[0];
-        }
+        var url = window.location.toString();
+        var base_url = url.split("#")[0];
+        
         var hash = "";
         $.each(active_states, function(k,v){
           hash += (k+"="+v+"&");
@@ -57,9 +48,11 @@
           var is_ix = klasses.indexOf("is");
           var part = klasses[is_ix-1];
           var state = klasses[is_ix+1];
-
-          if (_parts[part] && _parts[part].indexOf(state) == -1){
-            _parts[part].push(state);
+          
+          if (_parts[part]){
+            if(_parts[part].indexOf(state) == -1){
+              _parts[part].push(state);
+            }
           } else {
             _parts[part] = [state];
           }
@@ -84,6 +77,7 @@
       
       
       parts = find_parts();
+      
       // read active states from cookie and url
       active_states = $.cookies.get('active_states') || {};
       
@@ -95,8 +89,6 @@
           delete active_states[k];
         }
       });
-      
-      console.log('states: '+active_states);
       
       // draw bar
       var selects = '';
@@ -120,7 +112,6 @@
           </select>\
         ';
         
-        console.log('drawing bar');
       });
       
       $('body').prepend('<div id="pp_bar">\
@@ -142,7 +133,6 @@
       $("#pp_bar select").change(function(event){
         select = event.target;
         option = select.options[select.selectedIndex];
-        console.log("part:"+select.name+", state:"+option.value);
         activate_state(select.name, option.value);
       })
     });
